@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda - Novo contato</title>
+</head>
+<body>
+    <div class="col">
+        <h1>Criar novo contato</h1>
+        <form method="POST" action="/adicionar">
+            <label for="nome">Nome: </label>
+            <input th:value="${contato.nome}" type="text" name="nome" id="nome">
+            <label for="tipo">Tipo: </label>
+            <input th:value="${contato.tipo}" type="text" name="tipo" id="tipo">
+            <label for="telefone">Telefone: </label>
+            <input th:value="${contato.telefone}" type="text" name="telefone" id="telefone">
+            <input th:value="${contato.id}" type="hidden" name="id" id="id">
+            <input type="submit" value="Salvar">
+        </form>
+    </div>
+</body>
+</html>
